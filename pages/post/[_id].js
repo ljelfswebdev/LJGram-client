@@ -66,7 +66,7 @@ const PostComments = () => {
           setComment('')
           setVisible(false)
           fetchPost();
-          toast.success('Commented added')
+          toast.success('Comment added')
     
         } catch(err){
           console.log(err)

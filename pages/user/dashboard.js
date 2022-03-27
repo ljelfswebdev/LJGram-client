@@ -56,7 +56,7 @@ const Dashboard = () => {
   const postSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:8002/api/create-post', { content, image});
+      const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API}/create-post`, { content, image});
       console.log("create post response => ", data);
       if (data.error) {
         toast.error(data.error);
